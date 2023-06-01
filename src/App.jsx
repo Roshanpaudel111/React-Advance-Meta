@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './App.css';
 import { ThemeProvider, useTheme } from './ThemeContext';
 import Switch from './switch/Switch';

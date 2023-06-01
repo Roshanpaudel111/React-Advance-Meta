@@ -1,22 +1,16 @@
 import './switch.css';
 import { useTheme } from '../ThemeContext';
-import { useState } from 'react';
 
 const Switch = () => {
-  const [dtheme, setdTheme] = useState('light');
+  const { theme, setTheme } = useTheme();
 
   function handleClick() {
-    if (dtheme == 'light') {
-      setdTheme('dark');
-    } else {
-      setdTheme('light');
-    }
+    setTheme(theme === 'light' ? 'dark' : 'light');
   }
 
-  const { theme } = useTheme();
   return (
     <label className='switch'>
-      <input type='checkbox' checked={theme === dtheme} onClick={handleClick} />
+      <input type='checkbox' checked={theme === 'dark'} onClick={handleClick} />
       <span className='slider round' />
     </label>
   );
