@@ -1,20 +1,17 @@
-import React from "react";
+import React from 'react';
 
 function App() {
   const [user, setUser] = React.useState([]);
 
-  const fetchData = () => {
-
-  };
+  const fetchData = () => {};
 
   React.useEffect(() => {
     fetchData();
   }, []);
 
   return Object.keys(user).length > 0 ? (
-    <div style={{padding: "40px"}}>
+    <div style={{ padding: '40px' }}>
       <h1>Customer data</h1>
-
     </div>
   ) : (
     <h1>Data pending...</h1>
